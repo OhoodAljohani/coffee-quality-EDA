@@ -73,3 +73,6 @@ print("The data has "+str(df.shape[0])+" Rows and "+str(df.shape[1])+" Columns")
 # %%
 print("The data has "+str(df.shape[0])+" Rows and "+str(df.shape[1])+" Columns")
 # %%
+## Some EDA on Processing.Method and Flavor
+from plotnine import ggplot, aes, geom_line ,geom_point,geom_histogram,geom_boxplot
+ggplot(df) + aes(x="Processing.Method", y="Flavor")+ geom_boxplot()
